@@ -21,6 +21,7 @@ app.post("/", async (c) => {
   return new Response(response, {
     headers: {
       "content-type": "image/png",
+      "Content-Disposition": 'attachment; filename="generated-image.png"',
     },
   });
 });
