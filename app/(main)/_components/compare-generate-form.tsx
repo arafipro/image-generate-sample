@@ -86,26 +86,6 @@ export default function CompareGenerateForm() {
     }
   };
 
-  // const handleDownload = () => {
-  //   if (imageUrl) {
-  //     // Blobを取得
-  //     fetch(imageUrl)
-  //       .then((res) => res.blob())
-  //       .then((blob) => {
-  //         // Blobから新しいURLを作成
-  //         const url = window.URL.createObjectURL(blob);
-  //         const link = document.createElement("a");
-  //         link.href = url;
-  //         link.download = "generated-image.png";
-
-  //         // クリックイベントをシミュレート
-  //         link.dispatchEvent(new MouseEvent("click"));
-
-  //         // URLを解放
-  //         window.URL.revokeObjectURL(url);
-  //       });
-  //   }
-  // };
   return (
     <>
       <h2 className="text-2xl font-bold text-center mb-2">モデル比較</h2>
@@ -140,8 +120,8 @@ export default function CompareGenerateForm() {
                 <Image
                   src={generatedImages[model]}
                   alt={`${model}で生成された画像`}
-                  width={512}
-                  height={512}
+                  width={1024}
+                  height={1024}
                 />
                 <Button
                   onClick={() => handleDownload(model)}
